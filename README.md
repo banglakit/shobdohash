@@ -13,8 +13,10 @@ $ python -m pip install -e 'git+https://github.com:banglakit/shobdohash.git#egg=
 ```python
 from shobdohash import ShobdoHash
 
-hasher = Shobdohash()
-hasher('আমি')
+s = ShobdoHash()
+s('আমি')
+
+s('বাংলা') == s('বাঙলা')
 ```
 
 ## Running Tests
