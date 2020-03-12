@@ -5,9 +5,17 @@ algorithm described by Naushad UzZaman and Mumit Khan in
 [A Bangla Phonetic Encoding for Better Spelling Suggestions](http://panl10n.net/english/final%20reports/pdf%20files/Bangladesh/BAN18.pdf).
 
 ## Installation
+
+### Stable Version
+```shell script
+$ python -m pip install shobdohash
+```
+
+### Development Version
 ```shell script
 $ python -m pip install -e 'git+https://github.com:banglakit/shobdohash.git#egg=shobdohash'
 ```
+
 
 ## Usage
 ```python
