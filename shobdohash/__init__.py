@@ -1,3 +1,8 @@
+import re
+
+ZA_FOLA = re.compile('([\u0985-\u09df])\u09cd\u09af')
+
+
 class ShobdoHash:
     TRANSLATION_TABLE = {
         '\u0985': 'a',
@@ -81,4 +86,7 @@ class ShobdoHash:
         self.TRANSLATION_TABLE = {ord(k): ord(v) for k, v in self.TRANSLATION_TABLE.items()}
 
     def __call__(self, s: str):
-        return s.translate(self.TRANSLATION_TABLE).replace('\u09cd', '')
+        return self.preprocess(s).translate(self.TRANSLATION_TABLE).replace('\u09cd', '')
+
+    def preprocess(self, s: str):
+        return ZA_FOLA.sub('\\1\\1', s)
