@@ -1,6 +1,7 @@
 import re
 
 ZA_FOLA = re.compile('([\u0985-\u09df])\u09cd\u09af')
+NG_FOLA = re.compile('([\u0985-\u09df])\u09cd\u099e')
 BA_FOLA = re.compile('([\u0985-\u09ab\u09ad-\u09df])\u09cd\u09ac')
 
 class ShobdoHash:
@@ -89,6 +90,9 @@ class ShobdoHash:
         return self.preprocess(s).translate(self.TRANSLATION_TABLE).replace('\u09cd', '')
 
     def preprocess(self, s: str):
+        s = s.replace('জ্ঞ', 'gg')
+        s = s.replace('ক্ষ', 'খ')
         s = ZA_FOLA.sub('\\1\\1', s)
+        s = NG_FOLA.sub('\\1\\1', s)
         s = BA_FOLA.sub('\\1', s)
         return s
