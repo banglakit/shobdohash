@@ -4,7 +4,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setup(
-    name='sobdohash',
+    name='shobdohash',
     version='1.0.3',
     packages=['shobdohash'],
     url='https://github.com/banglakit/shobdohash',
