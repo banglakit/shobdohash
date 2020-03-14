@@ -4,6 +4,7 @@ ZA_FOLA = re.compile('([\u0985-\u09df])\u09cd\u09af')
 NG_FOLA = re.compile('([\u0985-\u09df])\u09cd\u099e')
 BA_FOLA = re.compile('([\u0985-\u09ab\u09ad-\u09df])\u09cd\u09ac')
 
+
 class ShobdoHash:
     TRANSLATION_TABLE = {
         '\u0985': 'a',
