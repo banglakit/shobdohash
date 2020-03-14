@@ -92,6 +92,7 @@ class ShobdoHash:
     def preprocess(self, s: str):
         s = s.replace('জ্ঞ', 'gg')
         s = s.replace('ক্ষ', 'খ')
+        s = s.replace('দ্ম', 'দ্দ')
         s = ZA_FOLA.sub('\\1\\1', s)
         s = NG_FOLA.sub('\\1\\1', s)
         s = BA_FOLA.sub('\\1', s)
