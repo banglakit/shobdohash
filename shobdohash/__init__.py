@@ -83,6 +83,12 @@ class ShobdoHash:
         '\u09b2': 'l',
     }
 
+    REPLACE_EXCEPTIONS = [
+        ('জ্ঞ', 'gg'),
+        ('ক্ষ', 'খ'),
+        ('দ্ম', 'দ্দ')
+    ]
+
     def __init__(self):
         self.TRANSLATION_TABLE = {ord(k): ord(v) for k, v in self.TRANSLATION_TABLE.items()}
 
@@ -90,9 +96,9 @@ class ShobdoHash:
         return self.preprocess(s).translate(self.TRANSLATION_TABLE).replace('\u09cd', '')
 
     def preprocess(self, s: str):
-        s = s.replace('জ্ঞ', 'gg')
-        s = s.replace('ক্ষ', 'খ')
-        s = s.replace('দ্ম', 'দ্দ')
+        for target, repl in self.REPLACE_EXCEPTIONS:
+            s = s.replace(target, repl)
+
         s = ZA_FOLA.sub('\\1\\1', s)
         s = NG_FOLA.sub('\\1\\1', s)
         s = BA_FOLA.sub('\\1', s)
