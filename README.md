@@ -32,3 +32,8 @@ s('বাংলা') == s('বাঙলা')
 $ pip install -r requirements-test.txt
 $ pytest
 ```
+
+## Citing
+```
+Adhikary, A. (2020, March 14). Shobdohash (Version 1.0.3) [Computer software]. Retrieved [Date], from https://github.com/banglakit/shobdohash
+```
