@@ -2,7 +2,7 @@
 
 Shobdohash is a Bengali Soundex Implementation to phonetically hash and compare similar words. Implemented from the
 algorithm described by Naushad UzZaman and Mumit Khan in
-[A Bangla Phonetic Encoding for Better Spelling Suggestions](http://panl10n.net/english/final%20reports/pdf%20files/Bangladesh/BAN18.pdf).
+[A Bangla Phonetic Encoding for Better Spelling Suggestions](http://dspace.bracu.ac.bd/bitstream/handle/10361/310/Problems%20in%20teaching%20speaking%20in%20traditional%20ESL%20classrooms.PDF?sequence=1).
 
 ## Installation
 
