@@ -35,5 +35,15 @@ $ pytest
 
 ## Citing
 ```
-Adhikary, A. (2020, March 14). Shobdohash (Version 1.0.3) [Computer software]. Retrieved [Date], from https://github.com/banglakit/shobdohash
+@software{aniruddha_adhikary_ani_2021_5091303,
+  author       = {Aniruddha Adhikary (Ani) and
+                  Mohammad Shiekh Ghazanfar},
+  title        = {banglakit/shobdohash: v1.0.4},
+  month        = jul,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v1.0.4},
+  doi          = {10.5281/zenodo.5091303},
+  url          = {https://doi.org/10.5281/zenodo.5091303}
+}
 ```
